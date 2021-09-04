@@ -37,7 +37,7 @@ public class TicTacToe implements ActionListener {
             for(int i=0;i<9;i++){
                 buttons[i] = new JButton();
                 button_panel.add(buttons[i]);
-                buttons[i].setFont(new Font("MV Boli",Font.BOLD,120));
+                buttons[i].setFont(new Font("Inter",Font.BOLD,120));
                 buttons[i].setFocusable(false);
                 buttons[i].addActionListener(this);
             }
@@ -48,6 +48,7 @@ public class TicTacToe implements ActionListener {
             
             firstTurn();
         }
+   
 
         @Override
         public void actionPerformed(ActionEvent e){
@@ -55,7 +56,7 @@ public class TicTacToe implements ActionListener {
                 if(e.getSource()==buttons[i]){
                     if(player1_turn==true){
                         if(buttons[i].getText()==""){
-                            buttons[i].setForeground(new Color(255,0,0));
+                            buttons[i].setForeground(new Color(73,215,155));
                             buttons[i].setText("X");
                             player1_turn=false;
                             textfield.setText("O turn");
@@ -65,7 +66,7 @@ public class TicTacToe implements ActionListener {
 
                     else{
                         if(buttons[i].getText()==""){
-                          buttons[i].setForeground(new Color(0,0,255));
+                          buttons[i].setForeground(new Color(200,2,44));
                           buttons[i].setText("O");
                           player1_turn=true;
                           textfield.setText("X turn");
@@ -231,9 +232,9 @@ public class TicTacToe implements ActionListener {
         
 
         public void xWins(int a,int b,int c){
-            buttons[a].setBackground(new Color(25,255,0));
-            buttons[b].setBackground(new Color(25,255,0));
-            buttons[c].setBackground(new Color(25,255,0));
+            buttons[a].setBackground(new Color(73,215,155));
+            buttons[b].setBackground(new Color(73,215,155));
+            buttons[c].setBackground(new Color(73,215,155));
 
             for(int i=0;i<9;i++){
                 buttons[i].setEnabled(false);
@@ -243,9 +244,9 @@ public class TicTacToe implements ActionListener {
         }
 
         public void oWins(int a,int b,int c){
-            buttons[a].setBackground(new Color(25,255,0));
-            buttons[b].setBackground(new Color(25,255,0));
-            buttons[c].setBackground(new Color(25,255,0));
+            buttons[a].setBackground(new Color(73,215,155));
+            buttons[b].setBackground(new Color(73,215,155));
+            buttons[c].setBackground(new Color(73,215,155));
 
             for(int i=0;i<9;i++){
                 buttons[i].setEnabled(false);
